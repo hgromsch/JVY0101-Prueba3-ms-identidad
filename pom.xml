@@ -13,7 +13,7 @@
 
     <groupId>cl.respirarysoltar</groupId>
     <artifactId>ms-identidad</artifactId>
-    <version>0.1.0</version>
+    <version>0.3.0</version>
     <name>ms-identidad</name>
     <description>Autenticación y gestión de usuarios (pacientes, psicólogos, staff). Cubre RF-01. En producción delega la autenticación real y el MFA a Amazon Cognito; este servicio mantiene el perfil de negocio del usuario y sus roles.</description>
 
@@ -25,6 +25,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!-- Salud del contenedor: /actuator/health/liveness y /readiness (HEALTHCHECK de Docker y Swarm) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
